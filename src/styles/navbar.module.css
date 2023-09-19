@@ -2,7 +2,7 @@
 	/* look */
 	width: calc(100vw - 17px);
 	padding: 1.5rem 10rem;
-	background-color: navy;
+	background-color: #020f12;
 	color: white;
 	font-weight: 300;
 	/* flex */
@@ -13,13 +13,19 @@
 
 .navbarLogo {
 	font-size: 2rem;
+	transition: all ease-out 0.3s;
+}
+
+.navbarLogo:hover {
+	cursor: pointer;
 }
 
 .rightLinksDesktop {
+	font-size: 1.2rem;
 	/* flex */
 	display: flex;
 	align-items: baseline;
-	gap: 3rem;
+	gap: 5rem;
 }
 
 /* cursor pointer on all desktop links */
@@ -30,5 +36,22 @@
 .siteLinksDesktop {
 	/* flex */
 	display: flex;
-	gap: 2rem;
+	gap: 4rem;
+}
+
+.desktopLink {
+	transition: all ease-out 0.3s;
+	/* only needed if color is gradient */
+	background-size: 0%;
+	background-repeat: no-repeat;
+}
+
+.desktopLink:hover {
+	color: #178fb2;
+	/* try linear gradient text color */
+	/* background: linear-gradient(#178fb2, #6e38ba); 
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-size: 100%;*/
 }

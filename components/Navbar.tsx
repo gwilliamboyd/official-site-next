@@ -14,10 +14,10 @@ const Navbar = (props: Props) => {
 			<div className={styles.rightLinksDesktop}>
 				{/* site links */}
 				<div className={styles.siteLinksDesktop}>
-					<span>Home</span>
-					<span>Work</span>
-					<span>About</span>
-					<span>Contact</span>
+					<span className={styles.desktopLink}>Home</span>
+					<span className={styles.desktopLink}>Work</span>
+					<span className={styles.desktopLink}>About</span>
+					<span className={styles.desktopLink}>Contact</span>
 				</div>
 				{/* social links */}
 				<div>
