@@ -1,0 +1,34 @@
+.navbarMain {
+	/* look */
+	width: calc(100vw - 17px);
+	padding: 1.5rem 10rem;
+	background-color: navy;
+	color: white;
+	font-weight: 300;
+	/* flex */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbarLogo {
+	font-size: 2rem;
+}
+
+.rightLinksDesktop {
+	/* flex */
+	display: flex;
+	align-items: baseline;
+	gap: 3rem;
+}
+
+/* cursor pointer on all desktop links */
+.rightLinksDesktop:hover {
+	cursor: pointer;
+}
+
+.siteLinksDesktop {
+	/* flex */
+	display: flex;
+	gap: 2rem;
+}
