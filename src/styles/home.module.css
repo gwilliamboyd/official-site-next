@@ -2,13 +2,15 @@
 	/* shifts home section up behind navbar */
 	/* margin-top: -87px; */
 	width: calc(100vw - 17px);
-	height: calc(100vh - 87px);
+	min-height: 868px;
+	height: 868px;
 	/* height: 100vh; */
 	background-image: url('../../public/images/home-abstract-background.png');
 	background-repeat: no-repeat;
 }
 
 .homeContainer {
+	/* padding: 87px 0; */
 	width: 100%;
 	height: 100%;
 	/* grid */

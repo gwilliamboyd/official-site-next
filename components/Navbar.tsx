@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
 	// set scrolled state to change background color on scroll
 	useEffect(() => {
 		const handleScroll = (): void => {
-			window.scrollY > 0 ? setScrolled(true) : setScrolled(false)
+			window.scrollY > 90 ? setScrolled(true) : setScrolled(false)
 		}
 		window.addEventListener('scroll', handleScroll, { passive: true })
 	}, [scrolled])
@@ -19,7 +19,10 @@ const Navbar = (props: Props) => {
 	return (
 		<nav className={scrolled ? styles.navbarMainScrolled : styles.navbarMain}>
 			{/* logo */}
-			<span className={styles.navbarLogo}>G William Boyd</span>
+			<span
+				className={scrolled ? styles.navbarLogoScrolled : styles.navbarLogo}>
+				G William Boyd
+			</span>
 			{/* right links - desktop */}
 			<div className={styles.rightLinksDesktop}>
 				{/* site links */}

@@ -5,7 +5,6 @@
 	left: 0;
 	/* look */
 	width: calc(100vw - 17px);
-	padding: 1.5rem 10rem;
 	color: var(--text-color);
 	font-weight: 300;
 	/* flex */
@@ -14,21 +13,30 @@
 	align-items: center;
 }
 .navbarMain {
-	transition: background-color ease-out 0.4s;
+	padding: 1.5rem 10rem;
+	font-size: 1.2rem;
+	transition: all ease-out 0.35s;
 	background-color: var(--navbar-transparent);
 }
 .navbarMainScrolled {
-	transition: background-color ease-out 0.4s;
+	font-size: 1rem;
+	padding: 0.8rem 10rem;
+	transition: all ease-out 0.35s;
 	background-color: var(--navbar-opaque);
 }
 
 .navbarLogo {
 	color: var(--navbar-transparent);
 	font-size: 2rem;
-	transition: all ease-out 0.3s;
+	transition: color ease-out 0.3s;
+}
+.navbarLogoScrolled {
+	font-size: 2rem;
+	color: var(--text-color);
 }
 
-.navbarLogo:hover {
+.navbarLogo:hover,
+.navbarLogoScrolled:hover {
 	cursor: pointer;
 }
 

@@ -4,7 +4,7 @@
 	--text-color: #eeeeee;
 	--dark-text-color: #121212;
 	--navbar-transparent: rgba(2, 15, 18, 0);
-	--navbar-opaque: rgba(2, 15, 18, 0.75);
+	--navbar-opaque: rgba(2, 15, 18, 0.85);
 }
 
 * {
