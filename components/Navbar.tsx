@@ -14,7 +14,6 @@ const Navbar = (props: Props) => {
 			window.scrollY > 0 ? setScrolled(true) : setScrolled(false)
 		}
 		window.addEventListener('scroll', handleScroll, { passive: true })
-		console.log(scrolled)
 	}, [scrolled])
 
 	return (

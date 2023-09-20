@@ -15,8 +15,10 @@
 }
 .navbarMain {
 	background-color: rgba(2, 15, 18, 0);
+	transition: background-color ease-out 0.4s;
 }
 .navbarMainScrolled {
+	transition: background-color ease-out 0.4s;
 	background-color: rgba(2, 15, 18, 0.75);
 }
 
