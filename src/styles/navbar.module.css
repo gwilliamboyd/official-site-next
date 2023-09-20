@@ -6,7 +6,7 @@
 	/* look */
 	width: calc(100vw - 17px);
 	padding: 1.5rem 10rem;
-	color: white;
+	color: var(--text-color);
 	font-weight: 300;
 	/* flex */
 	display: flex;
@@ -14,16 +14,16 @@
 	align-items: center;
 }
 .navbarMain {
-	background-color: rgba(2, 15, 18, 0);
 	transition: background-color ease-out 0.4s;
+	background-color: var(--navbar-transparent);
 }
 .navbarMainScrolled {
 	transition: background-color ease-out 0.4s;
-	background-color: rgba(2, 15, 18, 0.75);
+	background-color: var(--navbar-opaque);
 }
 
 .navbarLogo {
-	color: rgba(255, 255, 255, 0);
+	color: var(--navbar-transparent);
 	font-size: 2rem;
 	transition: all ease-out 0.3s;
 }
@@ -60,7 +60,7 @@
 }
 
 .desktopLink:hover {
-	color: #178fb2;
+	color: var(--light-blue);
 	/* try linear gradient text color */
 	/* background: linear-gradient(#178fb2, #6e38ba); 
 	background-clip: text;

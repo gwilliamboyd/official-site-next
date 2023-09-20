@@ -1,0 +1,31 @@
+.workMaster {
+	padding: 2rem 0;
+	width: calc(100vw - 17px);
+	height: fit-content;
+	background-color: var(--background-color);
+}
+.workContainer {
+	width: 100%;
+	/* grid */
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-flow: row;
+	row-gap: 2rem;
+}
+
+.workItem {
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* GitHub Button */
+.gitHubButton {
+	padding: 1rem;
+	width: fit-content;
+	background-color: var(--light-blue);
+	color: var(--dark-text-color);
+}
