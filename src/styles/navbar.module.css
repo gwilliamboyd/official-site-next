@@ -1,8 +1,11 @@
-.navbarMain {
+.navbarMain,
+.navbarMainScrolled {
+	position: fixed;
+	top: 0;
+	left: 0;
 	/* look */
 	width: calc(100vw - 17px);
 	padding: 1.5rem 10rem;
-	background-color: #020f12;
 	color: white;
 	font-weight: 300;
 	/* flex */
@@ -10,8 +13,15 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.navbarMain {
+	background-color: rgba(2, 15, 18, 0);
+}
+.navbarMainScrolled {
+	background-color: rgba(2, 15, 18, 0.75);
+}
 
 .navbarLogo {
+	color: rgba(255, 255, 255, 0);
 	font-size: 2rem;
 	transition: all ease-out 0.3s;
 }
@@ -22,6 +32,7 @@
 
 .rightLinksDesktop {
 	font-size: 1.2rem;
+	font-weight: 200;
 	/* flex */
 	display: flex;
 	align-items: baseline;

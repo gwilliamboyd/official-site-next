@@ -15,6 +15,11 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
+	/* let scrolled: boolean
+	document.addEventListener('scroll', () => {
+		window.scrollY > 0 ? (scrolled = true) : (scrolled = false)
+		console.log(scrolled)
+	}) */
 	return (
 		<html lang='en'>
 			<body className={inter.className}>

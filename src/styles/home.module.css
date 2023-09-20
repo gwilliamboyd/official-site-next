@@ -1,6 +1,9 @@
 .homeMaster {
+	/* shifts home section up behind navbar */
+	/* margin-top: -87px; */
 	width: calc(100vw - 17px);
 	height: calc(100vh - 87px);
+	/* height: 100vh; */
 	background-image: url('../../public/images/home-abstract-background.png');
 	background-repeat: no-repeat;
 }

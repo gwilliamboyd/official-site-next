@@ -1,13 +1,24 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from '@/styles/navbar.module.css'
 
 type Props = {}
 
 const Navbar = (props: Props) => {
 	const [isMobile, setIsMobile] = useState(false)
+	const [scrolled, setScrolled] = useState(false)
+
+	// set scrolled state to change background color on scroll
+	useEffect(() => {
+		const handleScroll = (): void => {
+			window.scrollY > 0 ? setScrolled(true) : setScrolled(false)
+		}
+		window.addEventListener('scroll', handleScroll, { passive: true })
+		console.log(scrolled)
+	}, [scrolled])
+
 	return (
-		<nav className={styles.navbarMain}>
+		<nav className={scrolled ? styles.navbarMainScrolled : styles.navbarMain}>
 			{/* logo */}
 			<span className={styles.navbarLogo}>G William Boyd</span>
 			{/* right links - desktop */}

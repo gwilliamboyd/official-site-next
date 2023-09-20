@@ -17,8 +17,8 @@ const HomeInfo = (props: Props) => {
 					className={styles.homeImage}
 					src={crossArmsTall}
 					alt='G William Boyd - Arms Crossed'
-					width={505}
-					height={756}
+					width={504}
+					height={755}
 				/>
 				<div className={styles.homeText}>
 					<div className={styles.homeHeader}>
