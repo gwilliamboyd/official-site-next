@@ -24,7 +24,7 @@ const HomeInfo = (props: Props) => {
 					<div className={styles.homeHeader}>
 						<span className={styles.homeName}>G William Boyd</span>
 						<span className={styles.homeSubtitle}>
-							Full-stack Web Developer
+							Full-Stack Web Developer
 						</span>
 					</div>
 					<div className={styles.homeSkills}>
