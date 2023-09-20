@@ -15,13 +15,13 @@
 .navbarMain {
 	padding: 1.5rem 10rem;
 	font-size: 1.2rem;
-	transition: all ease-out 0.35s;
+	transition: all ease-out 0.25s;
 	background-color: var(--navbar-transparent);
 }
 .navbarMainScrolled {
 	font-size: 1rem;
 	padding: 0.8rem 10rem;
-	transition: all ease-out 0.35s;
+	transition: all ease-out 0.4s;
 	background-color: var(--navbar-opaque);
 }
 
@@ -42,7 +42,7 @@
 
 .rightLinksDesktop {
 	font-size: 1.2rem;
-	font-weight: 200;
+	font-weight: 300;
 	/* flex */
 	display: flex;
 	align-items: baseline;
