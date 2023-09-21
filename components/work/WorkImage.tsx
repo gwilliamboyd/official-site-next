@@ -24,8 +24,8 @@ const WorkImage = ({
 	skillsUsed,
 }: WorkImageProps) => {
 	return (
-		<>
-			<section className={styles.workItem}>
+		<section className={styles.workImageContainer}>
+			<div className={styles.workItem}>
 				{/* description */}
 				<WorkDescription
 					descriptionBody={descriptionBody}
@@ -40,9 +40,9 @@ const WorkImage = ({
 					width={width}
 					height={height}
 				/>
-			</section>
+			</div>
 			<GitHubButton gitHubLink={gitHubLink} />
-		</>
+		</section>
 	)
 }
 

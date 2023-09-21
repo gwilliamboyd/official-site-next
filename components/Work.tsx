@@ -10,17 +10,43 @@ const Work = (props: Props) => {
 			<span className={styles.workHeading}>My Work</span>
 			<div className={styles.workContainer}>
 				<WorkImage
-					imageSrc='/images/work/nba-stats-app.jpg'
+					imageSrc='/images/work/nba-stats-app.png'
 					altText='NBA Stats App - MERN Stack'
 					width={1000}
-					height={491}
+					height={595}
 					gitHubLink='https://github.com/gwilliamboyd/nba-stats-app'
-					descriptionBody='Work Description Broh!'
+					descriptionBody='Full stack (MERN) React app for tracking team and player
+					statistics for 2022-23 NBA season.'
 					skillsUsed={[
+						<WorkSkill
+							key={'mern stack'}
+							iconSrc='/images/icons/mern-stack-icon.png'
+							skill='MERN Stack'
+						/>,
 						<WorkSkill
 							key={'react'}
 							iconSrc='/images/icons/react-icon.png'
 							skill='React'
+						/>,
+						<WorkSkill
+							key={'redux'}
+							iconSrc='/images/icons/redux-icon.png'
+							skill='Redux Toolkit'
+						/>,
+						<WorkSkill
+							key={'material ui'}
+							iconSrc='/images/icons/mui-icon.png'
+							skill='Material UI'
+						/>,
+						<WorkSkill
+							key={'express'}
+							iconSrc='/images/icons/express-icon.png'
+							skill='Express'
+						/>,
+						<WorkSkill
+							key={'figma'}
+							iconSrc='/images/icons/figma-icon.png'
+							skill='Figma'
 						/>,
 					]}
 				/>
@@ -30,7 +56,7 @@ const Work = (props: Props) => {
 					width={1000}
 					height={595}
 					gitHubLink='https://github.com/gwilliamboyd/guithub-next-site'
-					descriptionBody='Work Description Broh!'
+					descriptionBody='Online store for hypothetical guitar retailer using the Sanity content management system.'
 					skillsUsed={[
 						<WorkSkill
 							key={'next.js'}
@@ -39,7 +65,7 @@ const Work = (props: Props) => {
 						/>,
 						<WorkSkill
 							key={'sanity cdn'}
-							iconSrc='/images/icons/next-js-icon.png'
+							iconSrc='/images/icons/sanity-logo-white.png'
 							skill='Sanity CDN'
 						/>,
 						<WorkSkill
@@ -49,7 +75,7 @@ const Work = (props: Props) => {
 						/>,
 						<WorkSkill
 							key={'photoshop'}
-							iconSrc='/images/icons/next-js-icon.png'
+							iconSrc='/images/icons/ps-icon.png'
 							skill='Photoshop'
 						/>,
 					]}
@@ -60,12 +86,27 @@ const Work = (props: Props) => {
 					width={1000}
 					height={567}
 					gitHubLink='https://github.com/gwilliamboyd/hogwarts-student-portal'
-					descriptionBody='Work Description Broh!'
+					descriptionBody='React site utilizing data from a public Harry Potter API.'
 					skillsUsed={[
 						<WorkSkill
 							key={'react'}
 							iconSrc='/images/icons/react-icon.png'
 							skill='React'
+						/>,
+						<WorkSkill
+							key={'figma'}
+							iconSrc='/images/icons/figma-icon.png'
+							skill='Figma'
+						/>,
+						<WorkSkill
+							key={'photoshop'}
+							iconSrc='/images/icons/ps-icon.png'
+							skill='Photoshop'
+						/>,
+						<WorkSkill
+							key={'framer motion'}
+							iconSrc='/images/icons/framer-motion-icon-white.png'
+							skill='Framer Motion'
 						/>,
 					]}
 				/>
