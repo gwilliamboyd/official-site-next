@@ -1,5 +1,6 @@
 import styles from '@/styles/work.module.css'
 import WorkImage from './work/WorkImage'
+import WorkSkill from './work/WorkSkill'
 
 type Props = {}
 
@@ -14,6 +15,14 @@ const Work = (props: Props) => {
 					width={1000}
 					height={491}
 					gitHubLink='https://github.com/gwilliamboyd/nba-stats-app'
+					descriptionBody='Work Description Broh!'
+					skillsUsed={[
+						<WorkSkill
+							key={'react'}
+							iconSrc='/images/icons/react-icon.png'
+							skill='React'
+						/>,
+					]}
 				/>
 				<WorkImage
 					imageSrc='/images/work/guithub-desktop-preview.jpg'
@@ -21,6 +30,34 @@ const Work = (props: Props) => {
 					width={1000}
 					height={595}
 					gitHubLink='https://github.com/gwilliamboyd/guithub-next-site'
+					descriptionBody='Work Description Broh!'
+					skillsUsed={[
+						<WorkSkill
+							key={'react'}
+							iconSrc='/images/icons/react-icon.png'
+							skill='React'
+						/>,
+						<WorkSkill
+							key={'next.js'}
+							iconSrc='/images/icons/next-js-icon.png'
+							skill='Next.js'
+						/>,
+					]}
+				/>
+				<WorkImage
+					imageSrc='/images/work/hogwarts-student-portal.jpg'
+					altText='Hogwarts Student Portal - React SPA'
+					width={1000}
+					height={567}
+					gitHubLink='https://github.com/gwilliamboyd/hogwarts-student-portal'
+					descriptionBody='Work Description Broh!'
+					skillsUsed={[
+						<WorkSkill
+							key={'react'}
+							iconSrc='/images/icons/react-icon.png'
+							skill='React'
+						/>,
+					]}
 				/>
 			</div>
 		</section>
