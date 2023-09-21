@@ -9,10 +9,10 @@ const WorkSkill = ({ iconSrc, skill }: Props) => {
 			<Image
 				src={iconSrc}
 				alt={skill}
-				width={60}
-				height={60}
+				width={64}
+				height={64}
 			/>
-			<span>{skill}</span>
+			<span className={styles.skillTitle}>{skill}</span>
 		</div>
 	)
 }

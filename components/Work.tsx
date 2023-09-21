@@ -33,14 +33,24 @@ const Work = (props: Props) => {
 					descriptionBody='Work Description Broh!'
 					skillsUsed={[
 						<WorkSkill
-							key={'react'}
-							iconSrc='/images/icons/react-icon.png'
-							skill='React'
-						/>,
-						<WorkSkill
 							key={'next.js'}
 							iconSrc='/images/icons/next-js-icon.png'
 							skill='Next.js'
+						/>,
+						<WorkSkill
+							key={'sanity cdn'}
+							iconSrc='/images/icons/next-js-icon.png'
+							skill='Sanity CDN'
+						/>,
+						<WorkSkill
+							key={'figma'}
+							iconSrc='/images/icons/figma-icon.png'
+							skill='Figma'
+						/>,
+						<WorkSkill
+							key={'photoshop'}
+							iconSrc='/images/icons/next-js-icon.png'
+							skill='Photoshop'
 						/>,
 					]}
 				/>

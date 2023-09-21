@@ -41,7 +41,8 @@
 
 .workDesc {
 	/* look */
-	padding: 1rem 3rem;
+	height: 100%;
+	padding: 2rem 4rem;
 	font-size: 2rem;
 	background: var(--work-desc-bg);
 	color: var(--text-color);
@@ -57,8 +58,8 @@
 	/* flex */
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	gap: 1rem;
+	justify-content: space-between;
+	gap: 8rem;
 	/* transition for work desc */
 	transition: all ease-out 0.3s;
 }
@@ -74,19 +75,28 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 1rem;
 }
 
 .workflowSkills {
 	/* flex */
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 3rem;
+	grid-auto-flow: row;
+	justify-items: center;
+	row-gap: 2rem;
 }
 
 .skill {
+	width: 260px;
 	/* flex */
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: 1.5rem;
+}
+.skillTitle {
+	font-size: 2rem;
 }
 
 /* GitHub Button */

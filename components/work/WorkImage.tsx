@@ -27,17 +27,10 @@ const WorkImage = ({
 		<>
 			<section className={styles.workItem}>
 				{/* description */}
-				<WorkDescription>
-					<span>{descriptionBody}</span>
-					<div className={styles.skillsUsed}>
-						<span>Workflow</span>
-						<div className={styles.workflowSkills}>
-							{skillsUsed.map(
-								(skill: React.ReactNode): React.ReactNode => skill
-							)}
-						</div>
-					</div>
-				</WorkDescription>
+				<WorkDescription
+					descriptionBody={descriptionBody}
+					skillsUsed={skillsUsed}
+				/>
 				{/* image */}
 				<Image
 					className={styles.workImage}
