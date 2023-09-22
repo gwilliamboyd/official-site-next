@@ -47,7 +47,7 @@
 	letter-spacing: 2px;
 	/* flex */
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	gap: 5rem;
 }
 
@@ -77,4 +77,15 @@
 	-webkit-background-clip: text;
 	color: transparent;
 	background-size: 100%;*/
+}
+
+.socialLinks {
+	/* flex */
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+}
+.socialLinks > a {
+	display: block;
+	height: 36px;
 }

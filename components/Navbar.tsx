@@ -1,6 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
 import styles from '@/styles/navbar.module.css'
+import LinkedInIcon from './navbar/LinkedInIcon'
+import GitHubIcon from './navbar/GitHubIcon'
 
 type Props = {}
 
@@ -33,13 +35,21 @@ const Navbar = (props: Props) => {
 					<span className={styles.desktopLink}>Contact</span>
 				</div>
 				{/* social links */}
-				<div>
-					<span>
-						<b>LI</b>
-					</span>
-					<span>
-						<b>GH</b>
-					</span>
+				<div className={styles.socialLinks}>
+					<a
+						className={styles.socialLink}
+						href='https://www.linkedin.com/in/gwilliamboyd/'
+						target='_blank'>
+						{/* <b>LI</b> */}
+						<LinkedInIcon dimensions={36} />
+					</a>
+					<a
+						className={styles.socialLink}
+						href='https://github.com/gwilliamboyd'
+						target='_blank'>
+						{/* <b>GH</b> */}
+						<GitHubIcon dimensions={36} />
+					</a>
 				</div>
 			</div>
 			{/* IF MOBILE - mobile menu */}

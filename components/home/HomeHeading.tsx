@@ -12,7 +12,7 @@ const HomeHeading = (props: Props) => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				viewport={{ once: true }}
-				transition={{ ease: 'easeIn', duration: 0.9 }}>
+				transition={{ ease: 'easeIn', duration: 0.7 }}>
 				G William Boyd
 			</motion.span>
 			<motion.span
