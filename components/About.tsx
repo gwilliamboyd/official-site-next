@@ -18,36 +18,36 @@ const About = (props: Props) => {
 						skillTitle='MERN Stack'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/react-icon.png'
+						skillTitle='React'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/next-js-icon.png'
+						skillTitle='Next.js'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/node-icon.png'
+						skillTitle='Node.js'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/express-icon.png'
+						skillTitle='Express'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/redux-icon.png'
+						skillTitle='Redux Toolkit'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/js-icon.png'
+						skillTitle='Javscript'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/mui-icon.png'
+						skillTitle='Material UI'
 					/>
 					<AboutSkill
-						iconSrc='/images/icons/mern-stack-icon.png'
-						skillTitle='MERN Stack'
+						iconSrc='/images/icons/figma-icon.png'
+						skillTitle='Figma'
 					/>
 				</div>
 			</div>
