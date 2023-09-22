@@ -1,25 +1,26 @@
-'use client'
+import dynamic from 'next/dynamic'
 import styles from '@/styles/contact.module.css'
+import { createServerActionClient } from '@supabase/auth-helpers-nextjs'
+import { revalidatePath } from 'next/cache'
+import { cookies } from 'next/headers'
 import { FormEvent } from 'react'
+import ContactInput from './contact/ContactInput'
+/* const ContactInput = dynamic(() => import('./contact/ContactInput'), {
+	loading: () => <p>Loading input...</p>,
+}) */
 
 type Props = {}
 
 const Contact = (props: Props) => {
-	async function onSubmit(e: FormEvent<HTMLFormElement>): Promise<void> {
-		e.preventDefault()
-
-		const formData = new FormData(e.currentTarget)
-		try {
-			const response: Response = await fetch('/api/contact', {
-				method: 'POST',
-				body: formData,
-			})
-			if (!response.ok) {
-				throw new Error(`Invalid response: ${response.status}`)
-			}
-		} catch (err: any) {
-			console.error(err.message)
-		}
+	async function submitForm(formData: FormData): Promise<void> {
+		'use server'
+		const name = formData.get('name')
+		const email = formData.get('email')
+		const message = formData.get('message')
+		// const {name, email, message} = formData.get(formData)
+		const supabase = createServerActionClient({ cookies })
+		await supabase.from('formsubmissions').insert({ name, email, message })
+		revalidatePath('/')
 	}
 
 	return (
@@ -29,14 +30,39 @@ const Contact = (props: Props) => {
 				<span>I would love to chat about your next project!</span>
 				<span>Fill out the form below with any inquries!</span>
 				<form
-					onSubmit={onSubmit}
-					action=''
-					method='post'>
-					<input
-						type='text'
-						name='name'
-					/>
-					<button type='submit'>Submit</button>
+					className={styles.contactForm}
+					action={submitForm}>
+					<div className={styles.contactFormTextInputs}>
+						<ContactInput
+							name='name'
+							type='text'
+							heading='Name'
+						/>
+						<ContactInput
+							name='email'
+							type='email'
+							heading='Email'
+						/>
+						{/* <input
+							type='text'
+							name='name'
+						/>
+						<input
+							type='email'
+							name='email'
+						/> */}
+					</div>
+					<div className={styles.contactTextAreaContainer}>
+						<span className={styles.contactTextAreaHeading}>Message</span>
+						<textarea
+							className={styles.contactTextArea}
+							name='message'></textarea>
+					</div>
+					<button
+						className={styles.contactButton}
+						type='submit'>
+						Submit
+					</button>
 				</form>
 			</span>
 		</section>
