@@ -5,9 +5,9 @@
 	--text-color: #eeeeee;
 	--dark-text-color: #121212;
 	--navbar-transparent: rgba(2, 15, 18, 0);
-	--navbar-opaque: rgba(2, 15, 18, 0.85);
+	--navbar-opaque: rgba(2, 15, 18, 0.9);
 	--work-desc-bg: rgba(18, 18, 18, 0.85);
-	--bio-body-bg: rgba(18, 18, 18, 0.5);
+	--bio-body-bg: rgba(18, 18, 18, 0.8);
 }
 
 * {

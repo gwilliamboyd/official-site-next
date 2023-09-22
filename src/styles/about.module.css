@@ -8,6 +8,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	/* background: rgb(2, 15, 18);
+	background: linear-gradient(
+		0deg,
+		rgba(2, 15, 18, 1) 0%,
+		rgba(3, 24, 28, 1) 70%,
+		rgba(4, 24, 28, 1) 100%
+	); */
+	/* background-color: #04181c; */
 	/* grid */
 	display: grid;
 	grid-template-columns: 5% 42.5% 5% 42.5% 5%;
@@ -28,6 +36,8 @@
 
 .skillsHeading,
 .bioHeading {
+	/* background-color: var(--bio-body-bg); */
+	padding: 0rem 5rem;
 	font-size: 4rem;
 	font-weight: 200;
 }
@@ -61,6 +71,7 @@
 }
 
 .bioBody {
+	/* background-color: var(--bio-body-bg); */
 	padding: 1rem;
 	text-align: left;
 	font-size: 1.4rem;
