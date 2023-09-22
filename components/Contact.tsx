@@ -25,25 +25,28 @@ const Contact = (props: Props) => {
 
 	return (
 		<section className={styles.contactMaster}>
-			<span className={styles.contactHeading}>Let&apos;s Connect!</span>
-			<span className={styles.contactSubheading}>
-				<span>I would love to chat about your next project!</span>
-				<span>Fill out the form below with any inquries!</span>
-				<form
-					className={styles.contactForm}
-					action={submitForm}>
-					<div className={styles.contactFormTextInputs}>
-						<ContactInput
-							name='name'
-							type='text'
-							heading='Name'
-						/>
-						<ContactInput
-							name='email'
-							type='email'
-							heading='Email'
-						/>
-						{/* <input
+			<span className={styles.contactHeading}>
+				<span>Let&apos;s Connect!</span>
+				{/* <span className={styles.contactSubheading}>
+					<span>I would love to chat about your next project!</span>
+				</span> */}
+				{/* <span>Fill out the form below with any inquries!</span> */}
+			</span>
+			<form
+				className={styles.contactForm}
+				action={submitForm}>
+				<div className={styles.contactFormTextInputs}>
+					<ContactInput
+						name='name'
+						type='text'
+						heading='Name'
+					/>
+					<ContactInput
+						name='email'
+						type='email'
+						heading='Email'
+					/>
+					{/* <input
 							type='text'
 							name='name'
 						/>
@@ -51,20 +54,19 @@ const Contact = (props: Props) => {
 							type='email'
 							name='email'
 						/> */}
-					</div>
-					<div className={styles.contactTextAreaContainer}>
-						<span className={styles.contactTextAreaHeading}>Message</span>
-						<textarea
-							className={styles.contactTextArea}
-							name='message'></textarea>
-					</div>
-					<button
-						className={styles.contactButton}
-						type='submit'>
-						Submit
-					</button>
-				</form>
-			</span>
+				</div>
+				<div className={styles.contactTextAreaContainer}>
+					<span className={styles.contactTextAreaHeading}>Message</span>
+					<textarea
+						className={styles.contactTextArea}
+						name='message'></textarea>
+				</div>
+				<button
+					className={styles.contactButton}
+					type='submit'>
+					Submit
+				</button>
+			</form>
 		</section>
 	)
 }

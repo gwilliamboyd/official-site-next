@@ -1,6 +1,8 @@
+'use client'
 import styles from '@/styles/work.module.css'
 import WorkImage from './work/WorkImage'
 import WorkSkill from './work/WorkSkill'
+import { motion } from 'framer-motion'
 
 type Props = {}
 
@@ -9,7 +11,19 @@ const Work = (props: Props) => {
 		<section className={styles.workMaster}>
 			<span className={styles.workHeading}>My Work</span>
 			<div className={styles.workContainer}>
+				<motion.span
+					className={styles.workInstructions}
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: true }}
+					transition={{ ease: 'easeOut', duration: 2 }}>
+					<i>
+						Hover over each image for a description. Click the image to visit
+						the example site.
+					</i>
+				</motion.span>
 				<WorkImage
+					linkHref='https://nba-stats-app-client.onrender.com/'
 					imageSrc='/images/work/nba-stats-app.png'
 					altText='NBA Stats App - MERN Stack'
 					width={1000}
@@ -51,6 +65,7 @@ const Work = (props: Props) => {
 					]}
 				/>
 				<WorkImage
+					linkHref='https://guithub.netlify.app/'
 					imageSrc='/images/work/guithub-desktop-preview.jpg'
 					altText='GuitHub Store - Next.js'
 					width={1000}
@@ -81,6 +96,7 @@ const Work = (props: Props) => {
 					]}
 				/>
 				<WorkImage
+					linkHref='https://gwilliamboyd.github.io/hogwarts-student-portal/'
 					imageSrc='/images/work/hogwarts-student-portal.jpg'
 					altText='Hogwarts Student Portal - React SPA'
 					width={1000}

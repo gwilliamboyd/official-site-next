@@ -5,6 +5,7 @@ import GitHubButton from './GitHubButton'
 import WorkDescription from './WorkDescription'
 
 type WorkImageProps = {
+	linkHref: string
 	imageSrc: string
 	altText: string
 	width: number
@@ -15,6 +16,7 @@ type WorkImageProps = {
 }
 
 const WorkImage = ({
+	linkHref,
 	imageSrc,
 	altText,
 	width,
@@ -27,10 +29,14 @@ const WorkImage = ({
 		<section className={styles.workImageContainer}>
 			<div className={styles.workItem}>
 				{/* description */}
-				<WorkDescription
-					descriptionBody={descriptionBody}
-					skillsUsed={skillsUsed}
-				/>
+				<a
+					href={linkHref}
+					target='_blank'>
+					<WorkDescription
+						descriptionBody={descriptionBody}
+						skillsUsed={skillsUsed}
+					/>
+				</a>
 				{/* image */}
 				<Image
 					className={styles.workImage}
