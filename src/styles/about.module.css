@@ -18,7 +18,7 @@
 	/* background-color: #04181c; */
 	/* grid */
 	display: grid;
-	grid-template-columns: 5% 42.5% 5% 42.5% 5%;
+	grid-template-columns: 10% 37.5% 5% 37.5% 10%;
 	grid-template-rows: 1fr;
 	justify-items: center;
 	align-items: flex-start;
