@@ -62,22 +62,29 @@
 .contactInput,
 .contactTextArea {
 	font-family: inherit;
-	font-size: 1.5rem;
 	color: var(--text-color);
 	border: 0;
 	border-radius: 2px;
 	outline: 1px solid var(--text-color);
 	background: 0;
+	/* transition: all ease-out 0.3s; */
+}
+
+.contactInput:focus,
+.contactTextArea:focus {
+	outline: 2px solid var(--light-blue);
 }
 
 .contactInput {
 	padding: 1rem 2rem;
+	font-size: 1.5rem;
 }
 
 .contactTextArea {
 	width: 100%;
 	height: 200px;
 	padding: 1rem 2rem;
+	font-size: 1.2rem;
 }
 
 /* button */
