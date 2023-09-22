@@ -4,10 +4,11 @@ import { createServerActionClient } from '@supabase/auth-helpers-nextjs'
 import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 import { FormEvent } from 'react'
-import ContactInput from './contact/ContactInput'
-/* const ContactInput = dynamic(() => import('./contact/ContactInput'), {
+import ContactSubHeading from './contact/ContactSubHeading'
+// import ContactInput from './contact/ContactInput'
+const ContactInput = dynamic(() => import('./contact/ContactInput'), {
 	loading: () => <p>Loading input...</p>,
-}) */
+})
 
 type Props = {}
 
@@ -27,6 +28,7 @@ const Contact = (props: Props) => {
 		<section className={styles.contactMaster}>
 			<span className={styles.contactHeading}>
 				<span>Let&apos;s Connect!</span>
+				<ContactSubHeading />
 				{/* <span className={styles.contactSubheading}>
 					<span>I would love to chat about your next project!</span>
 				</span> */}

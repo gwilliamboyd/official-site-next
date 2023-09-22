@@ -1,8 +1,9 @@
-'use client'
+// 'use client'
 import styles from '@/styles/work.module.css'
 import WorkImage from './work/WorkImage'
 import WorkSkill from './work/WorkSkill'
 import { motion } from 'framer-motion'
+import WorkInstructions from './work/WorkInstructions'
 
 type Props = {}
 
@@ -11,7 +12,8 @@ const Work = (props: Props) => {
 		<section className={styles.workMaster}>
 			<span className={styles.workHeading}>My Work</span>
 			<div className={styles.workContainer}>
-				<motion.span
+				<WorkInstructions />
+				{/* <motion.span
 					className={styles.workInstructions}
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
@@ -21,7 +23,7 @@ const Work = (props: Props) => {
 						Hover over each image for a description. Click the image to visit
 						the example site.
 					</i>
-				</motion.span>
+				</motion.span> */}
 				<WorkImage
 					linkHref='https://nba-stats-app-client.onrender.com/'
 					imageSrc='/images/work/nba-stats-app.png'
