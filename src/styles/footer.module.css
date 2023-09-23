@@ -1,0 +1,39 @@
+.footerMaster {
+	/* border-top: 1px solid var(--light-blue); */
+	/* background-color: var(--background-color); */
+	font-weight: 200;
+	width: calc(100vw - 17px);
+	color: var(--text-color);
+	background-color: var(--footer-background-color);
+	padding: 1rem 0;
+	/* flex */
+	display: flex;
+	justify-content: center;
+}
+
+.footerContainer {
+	width: 60%;
+	/* flex */
+	display: flex;
+	justify-content: space-between;
+}
+
+.footerHeading {
+	/* flex */
+	display: flex;
+	align-items: center;
+}
+
+.footerSkillList {
+	/* flex */
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footerSkill {
+	/* flex */
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}

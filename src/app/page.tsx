@@ -14,6 +14,9 @@ const About = dynamic(() => import('../../components/About'), {
 const Contact = dynamic(() => import('../../components/Contact'), {
 	loading: () => <p>Loading Contact...</p>,
 })
+const Footer = dynamic(() => import('../../components/Footer'), {
+	loading: () => <p>Loading Footer...</p>,
+})
 
 export default function Home() {
 	return (
@@ -22,6 +25,7 @@ export default function Home() {
 			<Work />
 			<About />
 			<Contact />
+			<Footer />
 		</main>
 	)
 }

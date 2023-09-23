@@ -51,7 +51,9 @@ const Contact = (props: Props) => {
 	}*/
 
 	return (
-		<section className={styles.contactMaster}>
+		<section
+			id='contact'
+			className={styles.contactMaster}>
 			<span className={styles.contactHeading}>
 				<span>Let&apos;s Connect!</span>
 				<ContactSubHeading />
@@ -72,6 +74,7 @@ const Contact = (props: Props) => {
 						heading='Email'
 						// submitForm={submitForm}
 					/> */}
+					{/* Name Input */}
 					<div className={styles.contactInputContainer}>
 						<span className={styles.contactInputHeading}>Name</span>
 						<input
@@ -83,6 +86,7 @@ const Contact = (props: Props) => {
 							value={name}
 						/>
 					</div>
+					{/* Email Input */}
 					<div className={styles.contactInputContainer}>
 						<span className={styles.contactInputHeading}>Email</span>
 						<input
@@ -95,11 +99,13 @@ const Contact = (props: Props) => {
 						/>
 					</div>
 				</div>
+				{/* Message Input */}
 				<div className={styles.contactTextAreaContainer}>
 					<span className={styles.contactTextAreaHeading}>Message</span>
 					<textarea
 						className={styles.contactTextArea}
 						name='message'
+						placeholder='Message/Inquiry'
 						onChange={e => setMessage(e.target.value)}
 						value={message}></textarea>
 				</div>

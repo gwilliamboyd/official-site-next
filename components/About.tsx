@@ -9,7 +9,9 @@ type Props = {}
 
 const About = (props: Props) => {
 	return (
-		<section className={styles.aboutMaster}>
+		<section
+			id='about'
+			className={styles.aboutMaster}>
 			<div className={styles.aboutSkillsContainer}>
 				<span className={styles.skillsHeading}>Skills</span>
 				<div className={styles.aboutSkills}>

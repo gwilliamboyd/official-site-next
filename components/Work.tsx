@@ -9,7 +9,9 @@ type Props = {}
 
 const Work = (props: Props) => {
 	return (
-		<section className={styles.workMaster}>
+		<section
+			id='work'
+			className={styles.workMaster}>
 			<span className={styles.workHeading}>My Work</span>
 			<div className={styles.workContainer}>
 				<WorkInstructions />

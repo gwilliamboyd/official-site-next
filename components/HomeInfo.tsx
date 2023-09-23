@@ -18,7 +18,9 @@ type Props = {}
 
 const HomeInfo = (props: Props) => {
 	return (
-		<section className={styles.homeMaster}>
+		<section
+			id='home'
+			className={styles.homeMaster}>
 			<div className={styles.homeContainer}>
 				{/* <HomeImage imageSrc={crossArmsTall} /> */}
 				<Image

@@ -1,6 +1,7 @@
 :root {
 	--background-color: #020f12;
 	--dark-background-color: rgba(18, 18, 18, 1);
+	--footer-background-color: #01090b;
 	--light-blue: #178fb2;
 	--text-color: #eeeeee;
 	--dark-text-color: #121212;
@@ -28,6 +29,10 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+textarea {
+	resize: none;
 }
 
 /* Container.tsx styles if needed */
