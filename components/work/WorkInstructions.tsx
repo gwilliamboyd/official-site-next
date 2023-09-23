@@ -11,7 +11,7 @@ const WorkInstructions = (props: Props) => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}
-			transition={{ ease: 'easeOut', duration: 2 }}>
+			transition={{ delay: 0.5, ease: 'easeOut', duration: 2 }}>
 			<i>
 				Hover over each image for a description. Click the image to visit the
 				example site.

@@ -29,6 +29,7 @@
 .workInstructions {
 	color: var(--text-color);
 	letter-spacing: 1px;
+	font-weight: 200;
 }
 
 .workImageContainer {
