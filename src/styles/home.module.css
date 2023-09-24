@@ -133,19 +133,22 @@
 		background-position: center;
 	}
 	.homeContainer {
-		align-items: flex-start;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
-		row-gap: 2rem;
+		/* flex */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		padding-bottom: 6rem;
 	}
 	.homeImage {
 		width: 320px;
 		grid-area: 1 / 1 / 1 / 1;
 	}
 	.homeText {
+		width: 95%;
 		align-items: center;
 		grid-area: 2 / 1 / 2 / 1;
-		gap: 3rem;
+		gap: 2rem;
 	}
 	.homeName {
 		font-weight: 200;
@@ -155,28 +158,12 @@
 		font-size: 1.3rem;
 	}
 	.homeSkills {
-		margin-left: 2.5rem;
+		/* margin-left: 1.5rem; */
 		width: 90%;
-		column-gap: 0;
+		column-gap: 0.5rem;
 	}
 	.homeSkill {
 		font-size: 1.2rem;
 		gap: 0.5rem;
 	}
-
-	/* if I want to emulate mobile:  */
-	/* .homeContainer {
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
-		row-gap: 2rem;
-	} */
-	/* .homeImage {
-		width: 380px;
-		grid-area: 1 / 1 / 1 / 1;
-	}
-
-	.homeText {
-		grid-area: 2 / 1 / 2 / 1;
-		gap: 3rem;
-	} */
 }

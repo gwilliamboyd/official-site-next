@@ -164,6 +164,12 @@
 	}
 }
 @media screen and (max-width: 600px) {
+	.workHeading {
+		font-size: 3rem;
+	}
+	.workInstructions {
+		font-size: 0.9rem;
+	}
 	.workImage,
 	.workItem {
 		width: 320px;
@@ -175,5 +181,9 @@
 	}
 	.workDescMobile {
 		width: 80%;
+	}
+	.gitHubButton {
+		font-size: 1rem;
+		padding: 0.75rem 1.5rem;
 	}
 }

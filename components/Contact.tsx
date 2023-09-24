@@ -27,6 +27,11 @@ const Contact = (props: Props) => {
 	const [message, setMessage] = useState<string>('')
 
 	// Supabase init
+	/* 	
+	using client component to allow Contact.tsx
+	to be a client component for useState while still
+	being able to post to database 
+	*/
 	const supabase: SupabaseClient<any, 'public', any> =
 		createClientComponentClient<any, 'public', any>()
 

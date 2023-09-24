@@ -163,11 +163,15 @@
 
 /* breakpoint: S */
 @media screen and (max-width: 600px) {
+	.bioHeading,
+	.skillsHeading {
+		font-size: 3.5rem;
+	}
 	.aboutSkillsContainer {
 		gap: 2rem;
 	}
 	.aboutSkills {
-		column-gap: 2rem;
+		column-gap: 1.5rem;
 	}
 	.aboutSkillImage {
 		width: 70px;
