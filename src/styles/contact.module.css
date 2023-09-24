@@ -9,7 +9,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 4rem;
+	gap: 2rem;
 }
 
 .contactHeading {
@@ -23,11 +23,12 @@
 }
 .contactSubheading {
 	font-size: 1.4rem;
+	line-height: 1.3;
 	/* flex */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
+	gap: 0rem;
 }
 
 .contactForm {

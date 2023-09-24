@@ -13,10 +13,10 @@ const ContactSubHeading = (props: Props) => {
 			viewport={{ once: true }}
 			transition={{ ease: 'easeOut', duration: 2 }}>
 			<span>I would love to chat about your next project!</span>
-			<span>
-				Fill out the form below with any inquries, and I&apos;d be happy to
-				help!
-			</span>
+			{/* <span>
+				Fill out the form below with any inquries, and let&apos;s make something
+				special!
+			</span> */}
 		</motion.span>
 	)
 }

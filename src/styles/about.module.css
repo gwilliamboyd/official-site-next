@@ -71,7 +71,9 @@
 }
 
 .bioBody {
-	/* background-color: var(--bio-body-bg); */
+	background-color: var(--bio-body-bg);
+	border-radius: 4px;
+	/* box-shadow: 0 0 35px var(--bio-body-bg); */
 	padding: 1rem;
 	text-align: left;
 	font-size: 1.4rem;

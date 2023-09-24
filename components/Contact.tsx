@@ -112,7 +112,7 @@ const Contact = (props: Props) => {
 				<button
 					className={styles.contactButton}
 					type='submit'>
-					Submit
+					Send
 				</button>
 			</form>
 		</section>

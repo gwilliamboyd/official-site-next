@@ -1,14 +1,17 @@
 :root {
 	--background-color: #020f12;
 	--dark-background-color: rgba(18, 18, 18, 1);
-	--footer-background-color: #01090b;
+	/* --footer-background-color: #01090b; */
+	--footer-background-color: rgba(1, 9, 11, 1);
 	--light-blue: #178fb2;
 	--text-color: #eeeeee;
 	--dark-text-color: #121212;
-	--navbar-transparent: rgba(2, 15, 18, 0);
-	--navbar-opaque: rgba(2, 15, 18, 0.95);
+	/* --navbar-transparent: rgba(2, 15, 18, 0);
+	--navbar-opaque: rgba(2, 15, 18, 0.95); */
+	--navbar-transparent: rgba(1, 9, 11, 0);
+	--navbar-opaque: rgba(1, 9, 11, 0.95);
 	--work-desc-bg: rgba(18, 18, 18, 0.85);
-	--bio-body-bg: rgba(18, 18, 18, 0.8);
+	--bio-body-bg: rgba(18, 18, 18, 0.25);
 }
 
 * {
