@@ -1,22 +1,48 @@
 'use client'
 import styles from '@/styles/home.module.css'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+// images
 import crossArmsTall from '../public/images/cross-arms-tall.jpg'
+import crossArmsCrop from '../public/images/cross-arms-crop.jpg'
 // icons
 import mernIcon from '../public/images/icons/mern-stack-icon.png'
 import reactIcon from '../public/images/icons/react-icon.png'
 import nextJsIcon from '../public/images/icons/next-js-icon.png'
 import reduxIcon from '../public/images/icons/redux-icon.png'
-// framer motion
-import { motion } from 'framer-motion'
-import { stagger } from 'framer-motion/dom'
+// components
 import HomeSkill from './home/HomeSkill'
 import HomeHeading from './home/HomeHeading'
 import HomeImage from './home/HomeImage'
+// framer motion
+import { motion } from 'framer-motion'
+import { stagger } from 'framer-motion/dom'
 
 type Props = {}
 
 const HomeInfo = (props: Props) => {
+	const [isMobile, setIsMobile] = useState(false)
+	// show mobile image if mobile
+	useEffect(() => {
+		const contentWatcher: MediaQueryList =
+			window.matchMedia('(max-width: 600px)')
+		setIsMobile(contentWatcher.matches)
+
+		function updateIsMobile(e: any): void {
+			setIsMobile(e.matches)
+		}
+		if (contentWatcher.addEventListener) {
+			contentWatcher.addEventListener('change', updateIsMobile)
+			return function cleanup() {
+				contentWatcher.removeEventListener('change', updateIsMobile)
+			}
+		} else {
+			contentWatcher.addListener(updateIsMobile)
+			return function cleanup() {
+				contentWatcher.removeListener(updateIsMobile)
+			}
+		}
+	}, [])
 	return (
 		<section
 			id='home'
@@ -25,7 +51,7 @@ const HomeInfo = (props: Props) => {
 				{/* <HomeImage imageSrc={crossArmsTall} /> */}
 				<Image
 					className={styles.homeImage}
-					src={crossArmsTall}
+					src={isMobile ? crossArmsCrop : crossArmsTall}
 					alt='G William Boyd - Arms Crossed'
 					width={0}
 					height={0}
