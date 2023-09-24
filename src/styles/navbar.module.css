@@ -127,7 +127,8 @@
 
 /* breakpoint: M */
 @media screen and (max-width: 900px) {
-	.navbarMain {
+	.navbarMain,
+	.navbarMainScrolled {
 		width: 100vw;
 	}
 	.mobileMenuIconContainer {
