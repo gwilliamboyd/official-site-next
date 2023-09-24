@@ -1,7 +1,5 @@
 import dynamic from 'next/dynamic'
 import styles from '../styles/page.module.css'
-// import Work from '../../components/Work'
-// import About from '../../components/About'
 const HomeInfo = dynamic(() => import('../../components/HomeInfo'), {
 	loading: () => <p>Loading...</p>,
 })

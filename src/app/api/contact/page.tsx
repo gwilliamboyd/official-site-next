@@ -21,7 +21,7 @@ import { NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 
-export async function POST(formData: FormData) {
+export async function submitContactForm(formData: FormData) {
 	'use server'
 	const name = formData.get('name')
 	const email = formData.get('email')
