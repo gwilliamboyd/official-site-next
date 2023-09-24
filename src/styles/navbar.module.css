@@ -42,6 +42,7 @@
 }
 
 .rightLinksDesktop {
+	position: relative;
 	font-size: 1.2rem;
 	font-weight: 200;
 	letter-spacing: 2px;
@@ -69,8 +70,10 @@
 	background-repeat: no-repeat;
 }
 
-.desktopLink:hover {
+.desktopLink:hover,
+.mobileMenuLink:hover {
 	color: var(--light-blue);
+	cursor: pointer;
 	/* try linear gradient text color */
 	/* background: linear-gradient(#178fb2, #6e38ba); 
 	background-clip: text;
@@ -88,4 +91,89 @@
 .socialLinks > a {
 	display: block;
 	height: 36px;
+}
+
+/* breakpoint: XL */
+@media screen and (max-width: 1536px) {
+	.navbarMain {
+		padding: 1.5rem 6rem;
+	}
+	.navbarMainScrolled {
+		padding: 0.8rem 6rem;
+	}
+	.rightLinksDesktop {
+		gap: 3rem;
+	}
+	.siteLinksDesktop {
+		gap: 3rem;
+	}
+}
+
+/* breakpoint: L */
+@media screen and (max-width: 1200px) {
+	.navbarMain {
+		padding: 1.5rem 3rem;
+	}
+	.navbarMainScrolled {
+		padding: 0.8rem 3rem;
+	}
+	/* .rightLinksDesktop {
+		gap: 3rem;
+	} */
+	.siteLinksDesktop {
+		gap: 2rem;
+	}
+}
+
+/* breakpoint: M */
+@media screen and (max-width: 900px) {
+	.mobileMenuIconContainer {
+		display: block;
+		height: 40px;
+	}
+
+	/* Mobile Menu */
+	.mobileMenuMaster {
+		z-index: 10;
+		width: fit-content;
+		/* padding: 0 3rem; */
+		border-radius: 4px;
+		background-color: var(--footer-background-color);
+		/* positioning */
+		position: fixed;
+		top: 78px;
+		right: 24px;
+		/* flex */
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		align-items: center;
+	}
+	.mobileMenuLink {
+		font-size: 3rem;
+		font-weight: 200;
+		padding: 2rem 6.5rem;
+	}
+}
+
+/* breakpoint: S */
+@media screen and (max-width: 600px) {
+	.navbarMain {
+		padding: 1.5rem 1.5rem;
+	}
+	.navbarMainScrolled {
+		padding: 0.8rem 1.5rem;
+	}
+
+	/* Mobile Menu */
+	.mobileMenuMaster {
+		top: 78px;
+		left: 0;
+		right: 0;
+	}
+	.mobileMenuLink {
+		font-size: 3rem;
+		font-weight: 200;
+		padding: 2rem 6rem;
+	}
 }
