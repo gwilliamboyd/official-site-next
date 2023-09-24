@@ -172,12 +172,11 @@
 	/* Mobile Menu */
 	.mobileMenuMaster {
 		top: 78px;
-		left: 0;
-		right: 0;
+		right: 8px;
 	}
 	.mobileMenuLink {
 		font-size: 3rem;
 		font-weight: 200;
-		padding: 2rem 6rem;
+		padding: 2rem 5rem;
 	}
 }
