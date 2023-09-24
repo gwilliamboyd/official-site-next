@@ -44,6 +44,7 @@ const WorkImage = ({
 					alt={altText}
 					width={width}
 					height={height}
+					sizes='100vw'
 				/>
 			</div>
 			<GitHubButton gitHubLink={gitHubLink} />

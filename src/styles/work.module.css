@@ -39,6 +39,11 @@
 	gap: 1rem;
 }
 
+.workImage {
+	width: 1000px;
+	height: 595px;
+}
+
 .workItem {
 	position: relative;
 	width: 1000px;
@@ -134,4 +139,30 @@
 	background-color: var(--dark-text-color);
 	color: var(--light-blue);
 	outline: 1px solid var(--light-blue);
+}
+
+@media screen and (max-width: 1200px) {
+	.workImage,
+	.workItem {
+		width: 850px;
+		height: 501px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.workImage,
+	.workItem {
+		width: 600px;
+		height: 357px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.workImage,
+	.workItem {
+		width: 320px;
+		height: 691.54px;
+	}
+	.workInstructions {
+		width: 80%;
+		text-align: center;
+	}
 }

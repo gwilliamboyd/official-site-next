@@ -1,5 +1,6 @@
-// 'use client'
+'use client'
 import styles from '@/styles/work.module.css'
+import { useEffect, useState } from 'react'
 import WorkImage from './work/WorkImage'
 import WorkSkill from './work/WorkSkill'
 import { motion } from 'framer-motion'
@@ -8,6 +9,28 @@ import WorkInstructions from './work/WorkInstructions'
 type Props = {}
 
 const Work = (props: Props) => {
+	const [isMobile, setIsMobile] = useState<boolean>(false)
+	// show mobile preview images
+	useEffect(() => {
+		const contentWatcher: MediaQueryList =
+			window.matchMedia('(max-width: 600px)')
+		setIsMobile(contentWatcher.matches)
+
+		function updateIsMobile(e: any): void {
+			setIsMobile(e.matches)
+		}
+		if (contentWatcher.addEventListener) {
+			contentWatcher.addEventListener('change', updateIsMobile)
+			return function cleanup() {
+				contentWatcher.removeEventListener('change', updateIsMobile)
+			}
+		} else {
+			contentWatcher.addListener(updateIsMobile)
+			return function cleanup() {
+				contentWatcher.removeListener(updateIsMobile)
+			}
+		}
+	}, [])
 	return (
 		<section
 			id='work'
@@ -28,10 +51,16 @@ const Work = (props: Props) => {
 				</motion.span> */}
 				<WorkImage
 					linkHref='https://nba-stats-app-client.onrender.com/'
-					imageSrc='/images/work/nba-stats-app.png'
+					imageSrc={
+						isMobile
+							? '/images/work/nba-preview-mobile.jpg'
+							: '/images/work/nba-stats-app.png'
+					}
 					altText='NBA Stats App - MERN Stack'
-					width={1000}
-					height={595}
+					width={0}
+					height={0}
+					/* width={1000}
+					height={595} */
 					gitHubLink='https://github.com/gwilliamboyd/nba-stats-app'
 					descriptionBody='Full stack (MERN) React app for tracking team and player
 					statistics for 2022-23 NBA season.'
@@ -70,10 +99,14 @@ const Work = (props: Props) => {
 				/>
 				<WorkImage
 					linkHref='https://guithub.netlify.app/'
-					imageSrc='/images/work/guithub-desktop-preview.jpg'
+					imageSrc={
+						isMobile
+							? '/images/work/guithub-preview-mobile.png'
+							: '/images/work/guithub-desktop-preview.jpg'
+					}
 					altText='GuitHub Store - Next.js'
-					width={1000}
-					height={595}
+					width={0}
+					height={0}
 					gitHubLink='https://github.com/gwilliamboyd/guithub-next-site'
 					descriptionBody='Online store for hypothetical guitar retailer using the Sanity content management system.'
 					skillsUsed={[
@@ -101,10 +134,14 @@ const Work = (props: Props) => {
 				/>
 				<WorkImage
 					linkHref='https://gwilliamboyd.github.io/hogwarts-student-portal/'
-					imageSrc='/images/work/hogwarts-student-portal.jpg'
+					imageSrc={
+						isMobile
+							? '/images/work/hogwarts-student-portal-mobile.png'
+							: '/images/work/hogwarts-student-portal.jpg'
+					}
 					altText='Hogwarts Student Portal - React SPA'
-					width={1000}
-					height={567}
+					width={0}
+					height={0}
 					gitHubLink='https://github.com/gwilliamboyd/hogwarts-student-portal'
 					descriptionBody='React site utilizing data from a public Harry Potter API.'
 					skillsUsed={[
