@@ -5,11 +5,14 @@ import WorkImage from './work/WorkImage'
 import WorkSkill from './work/WorkSkill'
 import { motion } from 'framer-motion'
 import WorkInstructions from './work/WorkInstructions'
+import { spawn } from 'child_process'
 
 type Props = {}
 
 const Work = (props: Props) => {
 	const [isMobile, setIsMobile] = useState<boolean>(false)
+	const [isTablet, setIsTablet] = useState<boolean>(false)
+
 	// show mobile preview images
 	useEffect(() => {
 		const contentWatcher: MediaQueryList =
@@ -31,13 +34,36 @@ const Work = (props: Props) => {
 			}
 		}
 	}, [])
+
+	// show mobile preview images
+	useEffect(() => {
+		const contentWatcher: MediaQueryList =
+			window.matchMedia('(max-width: 900px)')
+		setIsTablet(contentWatcher.matches)
+
+		function updateIsTablet(e: any): void {
+			setIsTablet(e.matches)
+		}
+		if (contentWatcher.addEventListener) {
+			contentWatcher.addEventListener('change', updateIsTablet)
+			return function cleanup() {
+				contentWatcher.removeEventListener('change', updateIsTablet)
+			}
+		} else {
+			contentWatcher.addListener(updateIsTablet)
+			return function cleanup() {
+				contentWatcher.removeListener(updateIsTablet)
+			}
+		}
+	}, [])
+
 	return (
 		<section
 			id='work'
 			className={styles.workMaster}>
 			<span className={styles.workHeading}>My Work</span>
+			<WorkInstructions isTablet={isTablet} />
 			<div className={styles.workContainer}>
-				<WorkInstructions />
 				{/* <motion.span
 					className={styles.workInstructions}
 					initial={{ opacity: 0 }}
@@ -49,6 +75,7 @@ const Work = (props: Props) => {
 						the example site.
 					</i>
 				</motion.span> */}
+
 				<WorkImage
 					linkHref='https://nba-stats-app-client.onrender.com/'
 					imageSrc={
@@ -96,6 +123,7 @@ const Work = (props: Props) => {
 							skill='Figma'
 						/>,
 					]}
+					isTablet={isTablet}
 				/>
 				<WorkImage
 					linkHref='https://guithub.netlify.app/'
@@ -131,6 +159,7 @@ const Work = (props: Props) => {
 							skill='Photoshop'
 						/>,
 					]}
+					isTablet={isTablet}
 				/>
 				<WorkImage
 					linkHref='https://gwilliamboyd.github.io/hogwarts-student-portal/'
@@ -166,6 +195,7 @@ const Work = (props: Props) => {
 							skill='Framer Motion'
 						/>,
 					]}
+					isTablet={isTablet}
 				/>
 			</div>
 		</section>

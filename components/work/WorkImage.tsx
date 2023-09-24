@@ -3,6 +3,7 @@ import styles from '@/styles/work.module.css'
 import Image from 'next/image'
 import GitHubButton from './GitHubButton'
 import WorkDescription from './WorkDescription'
+import { SetStateAction } from 'react'
 
 type WorkImageProps = {
 	linkHref: string
@@ -13,6 +14,7 @@ type WorkImageProps = {
 	gitHubLink: string
 	descriptionBody: string
 	skillsUsed: React.ReactNode[]
+	isTablet: boolean
 }
 
 const WorkImage = ({
@@ -24,6 +26,7 @@ const WorkImage = ({
 	gitHubLink,
 	descriptionBody,
 	skillsUsed,
+	isTablet,
 }: WorkImageProps) => {
 	return (
 		<section className={styles.workImageContainer}>
@@ -36,17 +39,21 @@ const WorkImage = ({
 						descriptionBody={descriptionBody}
 						skillsUsed={skillsUsed}
 					/>
+
+					{/* image */}
+					<Image
+						className={styles.workImage}
+						src={imageSrc}
+						alt={altText}
+						width={width}
+						height={height}
+						sizes='100vw'
+					/>
 				</a>
-				{/* image */}
-				<Image
-					className={styles.workImage}
-					src={imageSrc}
-					alt={altText}
-					width={width}
-					height={height}
-					sizes='100vw'
-				/>
 			</div>
+			{isTablet && (
+				<span className={styles.workDescMobile}>{descriptionBody}</span>
+			)}
 			<GitHubButton gitHubLink={gitHubLink} />
 		</section>
 	)

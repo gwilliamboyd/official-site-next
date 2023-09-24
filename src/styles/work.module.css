@@ -154,6 +154,14 @@
 		width: 600px;
 		height: 357px;
 	}
+	.workDesc {
+		display: none;
+	}
+	.workDescMobile {
+		color: var(--text-color);
+		font-size: 18px;
+		width: 80%;
+	}
 }
 @media screen and (max-width: 600px) {
 	.workImage,
@@ -164,5 +172,8 @@
 	.workInstructions {
 		width: 80%;
 		text-align: center;
+	}
+	.workDescMobile {
+		width: 80%;
 	}
 }
