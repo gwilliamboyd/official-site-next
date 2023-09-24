@@ -129,8 +129,8 @@
 /* breakpoint: M */
 @media screen and (max-width: 900px) {
 	.aboutMaster {
+		width: 100vw;
 		background-image: url('../../public/images//backgrounds/about-background-mobile.png');
-
 		/* flex */
 		display: flex;
 		flex-direction: column;
