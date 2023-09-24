@@ -40,7 +40,6 @@ const WorkImage = ({
 				{/* image */}
 				<Image
 					className={styles.workImage}
-					onMouseEnter={() => console.log('work image hover')}
 					src={imageSrc}
 					alt={altText}
 					width={width}
