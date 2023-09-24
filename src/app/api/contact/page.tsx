@@ -16,7 +16,7 @@ export default async function POST(formData: FormData): Promise<void> {
 }
  */
 
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+/* import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
@@ -42,4 +42,4 @@ export async function submitContactForm(formData: FormData) {
 	revalidatePath('/')
 
 	return NextResponse.json(data)
-}
+} */
