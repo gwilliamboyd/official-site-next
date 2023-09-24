@@ -8,10 +8,12 @@ const AboutSkill = ({ iconSrc, skillTitle }: Props) => {
 		<div className={styles.aboutSkillIndiv}>
 			{/* icon */}
 			<Image
+				className={styles.aboutSkillImage}
 				src={iconSrc}
 				alt={skillTitle}
-				width={120}
-				height={120}
+				width={0}
+				height={0}
+				sizes='100vw'
 			/>
 			{/* skill title */}
 			<span>{skillTitle}</span>

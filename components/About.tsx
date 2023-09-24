@@ -56,10 +56,12 @@ const About = (props: Props) => {
 			<div className={styles.bioContainer}>
 				<span className={styles.bioHeading}>Bio</span>
 				<Image
+					className={styles.bioImage}
 					src={'/images/bio-picture.jpg'}
 					alt='G William Boyd - Bio Image'
-					width={413}
-					height={352}
+					width={0}
+					height={0}
+					sizes='100vw'
 				/>
 				<span className={styles.bioBody}>
 					<span>

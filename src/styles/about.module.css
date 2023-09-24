@@ -57,6 +57,10 @@
 	align-items: center;
 	gap: 1rem;
 }
+.aboutSkillImage {
+	width: 120px;
+	height: 120px;
+}
 
 .bioContainer {
 	/* background-color: var(--bio-body-bg); */
@@ -68,6 +72,11 @@
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	gap: 2rem;
+}
+
+.bioImage {
+	width: 413px;
+	height: 352px;
 }
 
 .bioBody {
@@ -88,5 +97,83 @@
 @media screen and (max-width: 1536px) {
 	.aboutMaster {
 		grid-template-columns: 5% 42.5% 5% 42.5% 5%;
+	}
+	.aboutSkills {
+		column-gap: 4rem;
+	}
+	.aboutSkillImage {
+		width: 110px;
+		height: 110px;
+	}
+	.bioBody {
+		width: 95%;
+	}
+}
+
+/* breakpoint: L */
+@media screen and (max-width: 1200px) {
+	.aboutSkillImage {
+		width: 100px;
+		height: 100px;
+	}
+	.bioImage {
+		width: 80%;
+		height: auto;
+	}
+	.bioBody {
+		width: 95%;
+		font-size: 1.2rem;
+	}
+}
+
+/* breakpoint: M */
+@media screen and (max-width: 900px) {
+	.aboutMaster {
+		background-image: url('../../public/images//backgrounds/about-background-mobile.png');
+
+		/* flex */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+	.aboutSkillsContainer {
+		grid-area: 1 / 1 / 1 / 1;
+		gap: 2rem;
+	}
+	.bioContainer {
+		grid-area: 2 / 1 / 2 / 1;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 2rem;
+	}
+	.aboutSkillImage {
+		width: 100px;
+		height: 100px;
+	}
+	.bioImage {
+		width: 80%;
+		height: auto;
+	}
+	.bioBody {
+		width: 95%;
+		font-size: 1.2rem;
+	}
+}
+
+/* breakpoint: S */
+@media screen and (max-width: 600px) {
+	.aboutSkillsContainer {
+		gap: 2rem;
+	}
+	.aboutSkills {
+		column-gap: 2rem;
+	}
+	.aboutSkillImage {
+		width: 70px;
+		height: 70px;
+	}
+	.bioBody {
+		font-size: 1.1rem;
 	}
 }
