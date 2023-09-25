@@ -4,6 +4,7 @@ const MobileMenuIcon = ({ dimensions }: Props) => {
 	return (
 		<svg
 			className='svgIcon'
+			id='mobileMenuIcon'
 			width={dimensions}
 			height={dimensions}
 			viewBox='0 0 1920 1920'

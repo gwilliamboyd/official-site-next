@@ -66,6 +66,9 @@ textarea {
 .svgIcon:hover {
 	fill: var(--light-blue);
 }
+#mobileMenuIcon:hover {
+	fill: var(--text-color);
+}
 
 /* change toastify green color */
 /* .Toastify__toast-container--top-right {

@@ -23,6 +23,11 @@ const Navbar = (props: Props) => {
 		window.addEventListener('scroll', handleScroll, { passive: true })
 	}, [scrolled])
 
+	// set scrolled to true if refresh happens while page is scrolled
+	useEffect((): void => {
+		window.scrollY > 90 ? setScrolled(true) : setScrolled(false)
+	}, [])
+
 	const scrollToElement = async (elementId: string): Promise<void> => {
 		/* const element: HTMLElement | null = await document?.getElementById(
 			elementId
