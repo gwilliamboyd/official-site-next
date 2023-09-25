@@ -12,6 +12,8 @@
 	--navbar-opaque: rgba(1, 9, 11, 0.95);
 	--work-desc-bg: rgba(18, 18, 18, 0.85);
 	--bio-body-bg: rgba(18, 18, 18, 0.25);
+	/* change toastify green color */
+	/* --toastify-color-success: #4e9a51; */
 
 	/* breakpoints */
 	--xs: 0px;
@@ -64,3 +66,17 @@ textarea {
 .svgIcon:hover {
 	fill: var(--light-blue);
 }
+
+/* change toastify green color */
+/* .Toastify__toast-container--top-right {
+	background-color: #4e9a51;
+}
+.Toastify__toast-body {
+	background-color: #4e9a51;
+}
+.Toastify__toast-theme--dark {
+	background-color: #4e9a51;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success {
+	background-color: #4e9a51;
+} */

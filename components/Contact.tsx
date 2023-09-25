@@ -1,23 +1,14 @@
 'use client'
-// import dynamic from 'next/dynamic'
-// import { revalidatePath } from 'next/cache'
-// import { cookies } from 'next/headers'
-// import ContactInput from './contact/ContactInput'
-/* const ContactInput = dynamic(() => import('./contact/ContactInput'), {
-	loading: () => <p>Loading input...</p>,
-}) */
-// import { submitForm } from '../hooks/submitForm'
-// import { POST } from '@/app/api/contact/page'
-// import { redirect } from 'next/navigation'
 import styles from '@/styles/contact.module.css'
 import {
 	SupabaseClient,
 	createClientComponentClient,
-	// createServerActionClient,
-	// createServerComponentClient,
 } from '@supabase/auth-helpers-nextjs'
 import { useState } from 'react'
 import ContactSubHeading from './contact/ContactSubHeading'
+// toast notifications
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 type Props = {}
 
@@ -25,6 +16,7 @@ const Contact = (props: Props) => {
 	const [name, setName] = useState<string>('')
 	const [email, setEmail] = useState<string>('')
 	const [message, setMessage] = useState<string>('')
+	const [formSubmitted, setFormSubmitted] = useState<boolean>(false)
 
 	// Supabase init
 	/* 	
@@ -40,25 +32,45 @@ const Contact = (props: Props) => {
 		const email = formData.get('email')
 		const message = formData.get('message')
 
-		// const supabase = createServerComponentClient(/* { cookies } */)
 		await supabase.from('formsubmissions').insert({ name, email, message })
-		// revalidatePath('/')
+
 		setName('')
 		setEmail('')
 		setMessage('')
+		toastNotif()
 	}
 
-	/*const handleFormSubmit = async () => {
-		 await fetch('http://localhost:3000/api/contact', {
-			method: 'POST',
-			// body: JSON.stringify()
-		}) 
-	}*/
+	const toastNotif = () =>
+		toast.success(
+			"Thanks for reaching out! I'll get back with you very soon!",
+			{
+				position: 'top-right',
+				autoClose: 5000,
+				hideProgressBar: true,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: false,
+				progress: undefined,
+				theme: 'dark',
+			}
+		)
 
 	return (
 		<section
 			id='contact'
 			className={styles.contactMaster}>
+			<ToastContainer
+				position='top-right'
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme='dark'
+			/>
 			<span className={styles.contactHeading}>
 				<span>Let&apos;s Connect!</span>
 				<ContactSubHeading />

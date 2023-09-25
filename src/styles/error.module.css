@@ -1,0 +1,26 @@
+.errorMaster {
+	padding-top: 72px;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	width: calc(100vw - 17px);
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.errorContainer {
+	width: 70%;
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.errorHeader {
+	font-size: 4rem;
+}
+
+.errorBody {
+	font-size: 2.5rem;
+}
