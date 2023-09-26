@@ -57,7 +57,7 @@ const HomeInfo = (props: Props) => {
 					height={0}
 					/* width={504}
 					height={755} */
-					sizes='100vw'
+					sizes='(min-width: 1220px) 504px, (min-width: 920px) 380px, (min-width: 620px) 280px, 320px'
 				/>
 				<div className={styles.homeText}>
 					<div className={styles.homeHeader}>

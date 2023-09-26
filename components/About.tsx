@@ -1,9 +1,10 @@
 import dynamic from 'next/dynamic'
 import styles from '@/styles/about.module.css'
 import Image from 'next/image'
-const AboutSkill = dynamic(() => import('./about/AboutSkill'), {
+import AboutSkill from './about/AboutSkill'
+/* const AboutSkill = dynamic(() => import('./about/AboutSkill'), {
 	loading: () => <p>Z</p>,
-})
+}) */
 
 type Props = {}
 
@@ -61,7 +62,7 @@ const About = (props: Props) => {
 					alt='G William Boyd - Bio Image'
 					width={0}
 					height={0}
-					sizes='100vw'
+					sizes='(min-width: 1300px) 413px, (min-width: 920px) calc(29.44vw + 36px), 80vw'
 				/>
 				<span className={styles.bioBody}>
 					<span>

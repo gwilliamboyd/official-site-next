@@ -28,7 +28,7 @@ const Navbar = (props: Props) => {
 		window.scrollY > 90 ? setScrolled(true) : setScrolled(false)
 	}, [])
 
-	const scrollToElement = async (elementId: string): Promise<void> => {
+	const scrollToElement = (elementId: string): void => {
 		/* const element: HTMLElement | null = await document?.getElementById(
 			elementId
 		)
@@ -72,10 +72,26 @@ const Navbar = (props: Props) => {
 		<nav className={scrolled ? styles.navbarMainScrolled : styles.navbarMain}>
 			{mobileOpen && (
 				<motion.div className={styles.mobileMenuMaster}>
-					<motion.span className={styles.mobileMenuLink}>Home</motion.span>
-					<motion.span className={styles.mobileMenuLink}>Work</motion.span>
-					<motion.span className={styles.mobileMenuLink}>About</motion.span>
-					<motion.span className={styles.mobileMenuLink}>Contact</motion.span>
+					<motion.span
+						className={styles.mobileMenuLink}
+						onClick={() => scrollToElement('home')}>
+						Home
+					</motion.span>
+					<motion.span
+						className={styles.mobileMenuLink}
+						onClick={() => scrollToElement('work')}>
+						Work
+					</motion.span>
+					<motion.span
+						className={styles.mobileMenuLink}
+						onClick={() => scrollToElement('about')}>
+						About
+					</motion.span>
+					<motion.span
+						className={styles.mobileMenuLink}
+						onClick={() => scrollToElement('contact')}>
+						Contact
+					</motion.span>
 				</motion.div>
 			)}
 			{/* logo */}

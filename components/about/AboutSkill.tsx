@@ -13,7 +13,7 @@ const AboutSkill = ({ iconSrc, skillTitle }: Props) => {
 				alt={skillTitle}
 				width={0}
 				height={0}
-				sizes='100vw'
+				sizes='(min-width: 1540px) 120px, (min-width: 1220px) 110px, (min-width: 620px) 100px, 70px'
 			/>
 			{/* skill title */}
 			<span>{skillTitle}</span>

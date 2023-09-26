@@ -47,7 +47,7 @@ const WorkImage = ({
 						alt={altText}
 						width={width}
 						height={height}
-						sizes='100vw'
+						sizes='(min-width: 1220px) 1000px, (min-width: 920px) 850px, (min-width: 620px) 600px, 320px'
 					/>
 				</a>
 			</div>
