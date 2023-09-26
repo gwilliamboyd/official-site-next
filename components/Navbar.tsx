@@ -28,14 +28,12 @@ const Navbar = (props: Props) => {
 		window.scrollY > 90 ? setScrolled(true) : setScrolled(false)
 	}, [])
 
+	/* window.addEventListener('scroll', () => {
+		console.log(window.scrollY)
+	}) */
+
+	// desktop
 	const scrollToElement = (elementId: string): void => {
-		/* const element: HTMLElement | null = await document?.getElementById(
-			elementId
-		)
-		const elementDimensions: DOMRect | undefined =
-			element?.getBoundingClientRect()
-		const offset: number = 72
-		const elementPosition = elementDimensions?.top - offset */
 		if (elementId === 'home') {
 			window.scrollTo({ top: 0, behavior: 'smooth' })
 		} else if (elementId === 'work') {
@@ -45,6 +43,19 @@ const Navbar = (props: Props) => {
 		} else if (elementId === 'contact') {
 			window.scrollTo({ top: 4045, behavior: 'smooth' })
 		}
+		setMobileOpen(false)
+	}
+
+	// mobile
+	const scrollToMobile = (elementId: string): void => {
+		if (elementId === 'work') {
+			window.scrollTo({ top: 701, behavior: 'smooth' })
+		} else if (elementId === 'about') {
+			window.scrollTo({ top: 3628, behavior: 'smooth' })
+		} else if (elementId === 'contact') {
+			window.scrollTo({ top: 4885, behavior: 'smooth' })
+		}
+		setMobileOpen(false)
 	}
 
 	// show mobile menu media query
@@ -79,17 +90,17 @@ const Navbar = (props: Props) => {
 					</motion.span>
 					<motion.span
 						className={styles.mobileMenuLink}
-						onClick={() => scrollToElement('work')}>
+						onClick={() => scrollToMobile('work')}>
 						Work
 					</motion.span>
 					<motion.span
 						className={styles.mobileMenuLink}
-						onClick={() => scrollToElement('about')}>
+						onClick={() => scrollToMobile('about')}>
 						About
 					</motion.span>
 					<motion.span
 						className={styles.mobileMenuLink}
-						onClick={() => scrollToElement('contact')}>
+						onClick={() => scrollToMobile('contact')}>
 						Contact
 					</motion.span>
 				</motion.div>

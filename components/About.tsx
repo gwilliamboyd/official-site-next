@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic'
 import styles from '@/styles/about.module.css'
 import Image from 'next/image'
-import AboutSkill from './about/AboutSkill'
-/* const AboutSkill = dynamic(() => import('./about/AboutSkill'), {
+// import AboutSkill from './about/AboutSkill'
+const AboutSkill = dynamic(() => import('./about/AboutSkill'), {
 	loading: () => <p>Z</p>,
-}) */
+})
 
 type Props = {}
 
